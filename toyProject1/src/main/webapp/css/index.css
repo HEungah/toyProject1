@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*{padding: 0px; margin: 0px;}
+
+body{
+	overflow-x:hidden;
+	color : #000;
+}
+
+.intro {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.intro__title{
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
