@@ -2,7 +2,7 @@ console.log('메인페이지 js 실행');
 
 const introTitle = document.getElementsByClassName("intro__title")[0];
 
-const title = "Monster\nis\ncomming";
+const title = "Welcome\nGame\nWorld!";
 
 let count = 0;
 let timer = 0;

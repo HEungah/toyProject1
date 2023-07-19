@@ -11,10 +11,21 @@ body{
     width: 100vw;
     height: 100vh;
     background-color: #000;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .intro__title{
 	color: white;
+	font-size: 75px;
+}
+
+.intro__title::after{
+	content: '|';
+	display: inline-block;
+	font-size: 75px;
 }
 
 
