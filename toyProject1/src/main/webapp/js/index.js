@@ -8,6 +8,11 @@ const title = "Welcome\nGame\nWorld!";
 let count = 0;
 let timer = 0;
 
+if ('scrollRestoration' in history) {
+    // 새로고침시 내려가는 스크롤 조정
+    history.scrollRestoration = 'manual';
+}
+
 function typingIntromTitle(){
 	console.log("타이핑 함수 실행");
 	let char = title[count++];

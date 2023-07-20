@@ -20,7 +20,7 @@ body{
 
 .intro__title{
 	color: white;
-	font-size: 75px;
+	font-size: 60px;
 }
 
 
@@ -46,11 +46,43 @@ body{
 	position: absolute;
     bottom: 52px;
     font-size: 65px;
+    cursor: pointer;
 }
 
 #content{
 	width: 100vw;
     height: 100vh;
+}
+
+.mainWrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.mainBox{
+	width: 100%;
+	margin-top: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.gameBox{
+	width: 500px;
+	height: 400px;
+	padding: 20px 40px;
+	background-color: red;
+}
+
+.imageBox{
+	width: 100%;
+	height: 300px;
+	background-image: url(../img/simonGame.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.gameBox h1{
+	text-align: center;
 }
 
 
