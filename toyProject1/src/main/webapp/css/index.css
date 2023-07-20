@@ -15,6 +15,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	position: relative;
 }
 
 .intro__title{
@@ -22,11 +23,37 @@ body{
 	font-size: 75px;
 }
 
+
 .intro__title::after{
 	content: '|';
 	display: inline-block;
-	font-size: 75px;
+	font-size: 65px;
+	animation : moveCursor 500ms infinite;
+	position: absolute;
 }
+
+@keyframes moveCursor{
+	from{
+		color : white;
+	}
+	to{
+		color : #000;
+	}
+}
+
+.intro__button{
+	color : white;
+	position: absolute;
+    bottom: 52px;
+    font-size: 65px;
+}
+
+#content{
+	width: 100vw;
+    height: 100vh;
+}
+
+
 
 
 

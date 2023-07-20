@@ -13,8 +13,13 @@
 	<div id="container" class="no-drag">
         <header class="intro">
             <h1 class="intro__title" lang="en" aria-label="게임"></h1>
-            <div class="intro__button" aria-hidden="true"></div>
+            <div onclick="scrollDown()" class="intro__button" aria-hidden="true">
+            	start
+            </div>
         </header>
+        <div id="content">
+        	
+        </div>
     </div>    
 	
 	
