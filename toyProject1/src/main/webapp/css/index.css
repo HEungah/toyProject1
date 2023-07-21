@@ -61,16 +61,22 @@ body{
 
 .mainBox{
 	width: 100%;
-	margin-top: 80px;
+	padding: 80px 0;
 	display: flex;
 	justify-content: space-between;
 }
 
 .gameBox{
-	width: 500px;
-	height: 400px;
+	width: 350px;
+	height: 350px;
 	padding: 20px 40px;
-	background-color: red;
+	box-shadow: 1px 1px 3px #8e8e8e;
+	cursor: pointer;
+}
+
+.gameBox:hover{
+	box-shadow: 3px 3px 10px #8e8e8e;
+	background-color: #F8F8F8;
 }
 
 .imageBox{

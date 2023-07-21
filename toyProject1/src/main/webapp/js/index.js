@@ -40,6 +40,13 @@ function scrollDown(){
 	content.scrollIntoView({behavior: "smooth"});
 }
 
+function goSimon(){
+	console.log('goSimon 함수 실행')
+	location.href="/toyProject1/game/simon.jsp";
+}
+
+
+
 
 
 

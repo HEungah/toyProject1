@@ -20,7 +20,7 @@
         <div id="content">
         	<div class="mainWrap">
         		<div class="mainBox">
-        			<div class="gameBox">
+        			<div onclick="goSimon()" class="gameBox">
         				<div class="imageBox"></div>
         				<h1>사이먼 게임</h1>
         			</div>
