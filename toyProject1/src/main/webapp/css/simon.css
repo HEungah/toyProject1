@@ -32,45 +32,67 @@
 .topLeft{
 	width: 350px;
 	height: 350px;
-	border: 2px solid black;
 	position: absolute;
-	top: -2px;
-	left: -2px;
-	border-radius: 370px 0 0 0;
+	top: 0;
+	left: 0;
+	border-radius: 350px 0 0 0;
 	background-color: darkgreen;
 }
 
 .topRight{
 	width: 350px;
 	height: 350px;
-	border: 2px solid black;
 	position: absolute;
-	top: -2px;
+	top: 0;
 	left: 50%;
-	border-radius: 0 370px 0 0;
-	background-color: yellow;
+	border-radius: 0 350px 0 0;
+	background-color: #BD2F2C;
 }
 
 .bottomLeft{
 	width: 350px;
 	height: 350px;
-	border: 2px solid black;
 	position: absolute;
 	top: 50%;
-	left: -2px;
-	border-radius: 0 0 0 370px;
-	background-color: red;
+	left: 0;
+	border-radius: 0 0 0 350px;
+	background-color: #FFD400;
 }
 
 .bottomRight{
 	width: 350px;
 	height: 350px;
-	border: 2px solid black;
 	position: absolute;
 	top: 350px;
 	left: 350px;
-	border-radius: 0 0 370px 0;
-	background-color: blue;
+	border-radius: 0 0 350px 0;
+	background-color: #222889;
+}
+
+.innerCircle{
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background-color: #8e8e8e;
+	top: 33%;
+	left: 32%;
+	border: 4px solid black;
+}
+
+.gameText{
+	text-align: center;
+	padding-top: 100px;
+    font-size: 30px;
+}
+
+.startBtn{
+	text-align: center;
+	width: 50px;
+	background-color: white;
+	margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 
