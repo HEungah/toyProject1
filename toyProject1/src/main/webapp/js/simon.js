@@ -19,7 +19,8 @@ function topLeftOn(){
 	topLeft.style.backgroundColor=" #44f028";
 	topRight.style.backgroundColor="#BD2F2C";
 	bottomLeft.style.backgroundColor="#FFD400";
-	bottomRight.style.backgroundColor="#222889";	
+	bottomRight.style.backgroundColor="#222889";
+	setTimeout(function(){resetColor()}, 1000);	
 }
 
 function topRightOn(){
@@ -27,6 +28,7 @@ function topRightOn(){
 	topLeft.style.backgroundColor="darkgreen";
 	bottomLeft.style.backgroundColor="#FFD400";
 	bottomRight.style.backgroundColor="#222889";
+	setTimeout(function(){resetColor()}, 1000);	
 }
 
 function bottomLeftOn(){
@@ -34,6 +36,7 @@ function bottomLeftOn(){
 	topLeft.style.backgroundColor="darkgreen";
 	topRight.style.backgroundColor="#BD2F2C";
 	bottomRight.style.backgroundColor="#222889";
+	setTimeout(function(){resetColor()}, 1000);	
 }
 
 function bottomRightOn(){
@@ -41,8 +44,10 @@ function bottomRightOn(){
 	topLeft.style.backgroundColor="darkgreen";
 	topRight.style.backgroundColor="#BD2F2C";
 	bottomLeft.style.backgroundColor="#FFD400";
+	setTimeout(function(){resetColor()}, 1000);	
 }
 
+// 모든 색판의 색을 원래대로 리셋시키는 함수
 function resetColor(){
 	bottomRight.style.backgroundColor=" #222889";
 	topLeft.style.backgroundColor="darkgreen";
@@ -60,29 +65,30 @@ function startGame(){	// f start
 			let color = Math.floor(Math.random() * 4);
 			console.log(color);
 			
-		    delay += 1000;
-		    if(i == 0){
-				delay = 0;
-			}
-			
 			if(color == 0){
 				console.log('초록색');
 			    setTimeout(function(){topLeftOn()}, delay);
+			    squenceList.push(color);
 		    }
 		    else if(color == 1){
 				console.log('빨간색');
 				setTimeout(function(){topRightOn()}, delay);
+				squenceList.push(color);
 			}
 			else if(color == 2){
 				console.log('노란색');
 				setTimeout(function(){bottomLeftOn()}, delay);
+				squenceList.push(color);
 			}
 			else if(color == 3){
 				console.log('파란색');
 				setTimeout(function(){bottomRightOn()}, delay);
+				squenceList.push(color);
 			}
+			delay += 1000;
 		
 		}	// for end
+		console.log(squenceList);
 		
 	}	// if end
 }	// f end
