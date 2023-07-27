@@ -88,11 +88,18 @@
 
 .startBtn{
 	text-align: center;
-	width: 50px;
-	background-color: white;
 	margin: 0 auto;
     margin-top: 20px;
     cursor: pointer;
+    padding: 10px 25px;
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    display: inherit;
 }
 
 

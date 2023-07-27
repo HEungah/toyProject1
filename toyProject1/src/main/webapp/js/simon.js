@@ -60,16 +60,10 @@ function topLeftOnClick(){
 		if(squenceList[squenceCount] == 0){
 			squenceCount++;
 			if(squenceCount == squenceList.length){
-				level++;
-				squenceCount = 0;
-				squenceList = [];
-				gameRun = true;
+				levelClear()
 			}
 		}else{
-			squenceCount = 0;
-			squenceList = [];
-			level = 1;
-			gameRun = true;
+			levelFalse()
 		}
 	}
 }
@@ -84,16 +78,10 @@ function topRightOnClick(){
 		if(squenceList[squenceCount] == 1){
 			squenceCount++;
 			if(squenceCount == squenceList.length){
-				level++;
-				squenceCount = 0;
-				squenceList = [];
-				gameRun = true;
+				levelClear()
 			}
 		}else{
-			squenceCount = 0;
-			squenceList = [];
-			level = 1;
-			gameRun = true;
+			levelFalse()
 		}
 	}	
 }
@@ -108,16 +96,10 @@ function bottomLeftOnClick(){
 		if(squenceList[squenceCount] == 2){
 			squenceCount++;
 			if(squenceCount == squenceList.length){
-				level++;
-				squenceCount = 0;
-				squenceList = [];
-				gameRun = true;
+				levelClear()
 			}
 		}else{
-			squenceCount = 0;
-			squenceList = [];
-			level = 1;
-			gameRun = true;
+			levelFalse()
 		}
 	}	
 }
@@ -132,16 +114,10 @@ function bottomRightOnClick(){
 		if(squenceList[squenceCount] == 3){
 			squenceCount++;
 			if(squenceCount == squenceList.length){
-				level++;
-				squenceCount = 0;
-				squenceList = [];
-				gameRun = true;
+				levelClear()
 			}
 		}else{
-			squenceCount = 0;
-			squenceList = [];
-			level = 1;
-			gameRun = true;
+			levelFalse()
 		}	
 	}
 }
@@ -152,6 +128,26 @@ function resetColor(){
 	topLeft.style.backgroundColor="darkgreen";
 	topRight.style.backgroundColor="#BD2F2C";
 	bottomLeft.style.backgroundColor="#FFD400";
+}
+
+// level 클리어시 실행함수
+function levelClear(){
+	let levelView = level;
+	setTimeout(function(){alert('level' + levelView + ' 클리어!');}, 500);	
+	level++;
+	squenceCount = 0;
+	squenceList = [];
+	gameRun = true;
+}
+
+// level 실패시 실행함수
+function levelFalse(){
+	let levelView = level;
+	setTimeout(function(){alert('level' + levelView + ' 실패...');}, 500);
+	squenceCount = 0;
+	squenceList = [];
+	level = 1;
+	gameRun = true;
 }
 
 
@@ -190,7 +186,7 @@ function startGame(){	// f start
 		}	// for end
 		
 		console.log(squenceList);
-		setTimeout(function(){gameRun = false; console.log('상태바꿈')}, delay+1000);
+		setTimeout(function(){gameRun = false; console.log('상태바꿈')}, delay+500);
 		
 	}	// if end
 }	// f end

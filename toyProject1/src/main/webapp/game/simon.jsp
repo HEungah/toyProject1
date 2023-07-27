@@ -19,7 +19,7 @@
 				<div class="bottomRight"></div>
 				<div class="innerCircle">
 					<div class="gameText">SimonGame</div>
-					<div onclick="startGame()" class="startBtn">Start</div>
+					<button onclick="startGame()" class="startBtn startBtnPlus">Start</button>
 				</div>
 			</div>
 		</div>
