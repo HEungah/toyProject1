@@ -7,6 +7,7 @@ let bottomRight = document.querySelector('.bottomRight');
 let squenceList = []; // 순서 저장 배열
 let colorList = [];	// 색상 횟수 저장 배열
 let level = 1; // 게임 레벨 변수
+let score = 0;	// 게임 점수 변수
 let squenceCount = 0;
 let gameRun = true;	// 게임 상태 변수
 
@@ -20,7 +21,7 @@ bottomRight.addEventListener("mousedown", bottomRightOnClick);
 function topLeftOn(){
 	topLeft.style.backgroundColor=" #44f028";
 	topRight.style.backgroundColor="#BD2F2C";
-	bottomLeft.style.backgroundColor="#FFD400";
+	bottomLeft.style.backgroundColor="#c9ab13";
 	bottomRight.style.backgroundColor="#222889";
 	setTimeout(function(){resetColor()}, 300);	
 }
@@ -28,7 +29,7 @@ function topLeftOn(){
 function topRightOn(){
 	topRight.style.backgroundColor=" #FF2300";
 	topLeft.style.backgroundColor="darkgreen";
-	bottomLeft.style.backgroundColor="#FFD400";
+	bottomLeft.style.backgroundColor="##c9ab13";
 	bottomRight.style.backgroundColor="#222889";
 	setTimeout(function(){resetColor()}, 300);	
 }
@@ -45,7 +46,7 @@ function bottomRightOn(){
 	bottomRight.style.backgroundColor=" #0A03FC";
 	topLeft.style.backgroundColor="darkgreen";
 	topRight.style.backgroundColor="#BD2F2C";
-	bottomLeft.style.backgroundColor="#FFD400";
+	bottomLeft.style.backgroundColor="#c9ab13";
 	setTimeout(function(){resetColor()}, 300);	
 }
 
@@ -54,7 +55,7 @@ function topLeftOnClick(){
 	if(gameRun == false){
 		topLeft.style.backgroundColor=" #44f028";
 		topRight.style.backgroundColor="#BD2F2C";
-		bottomLeft.style.backgroundColor="#FFD400";
+		bottomLeft.style.backgroundColor="#c9ab13";
 		bottomRight.style.backgroundColor="#222889";
 		setTimeout(function(){resetColor()}, 300);
 		if(squenceList[squenceCount] == 0){
@@ -72,7 +73,7 @@ function topRightOnClick(){
 	if(gameRun == false){
 		topRight.style.backgroundColor=" #FF2300";
 		topLeft.style.backgroundColor="darkgreen";
-		bottomLeft.style.backgroundColor="#FFD400";
+		bottomLeft.style.backgroundColor="#c9ab13";
 		bottomRight.style.backgroundColor="#222889";
 		setTimeout(function(){resetColor()}, 300);
 		if(squenceList[squenceCount] == 1){
@@ -109,7 +110,7 @@ function bottomRightOnClick(){
 		bottomRight.style.backgroundColor=" #0A03FC";
 		topLeft.style.backgroundColor="darkgreen";
 		topRight.style.backgroundColor="#BD2F2C";
-		bottomLeft.style.backgroundColor="#FFD400";
+		bottomLeft.style.backgroundColor="#c9ab13";
 		setTimeout(function(){resetColor()}, 300);
 		if(squenceList[squenceCount] == 3){
 			squenceCount++;
@@ -127,15 +128,17 @@ function resetColor(){
 	bottomRight.style.backgroundColor=" #222889";
 	topLeft.style.backgroundColor="darkgreen";
 	topRight.style.backgroundColor="#BD2F2C";
-	bottomLeft.style.backgroundColor="#FFD400";
+	bottomLeft.style.backgroundColor="#c9ab13";
 }
 
 // level 클리어시 실행함수
 function levelClear(){
 	let levelView = level;
-	setTimeout(function(){alert('level' + levelView + ' 클리어!');}, 500);	
+	console.log(levelView + '클리어!');
+	setTimeout(function(){startGame();}, 500);	
 	level++;
 	squenceCount = 0;
+	score += 10;
 	squenceList = [];
 	gameRun = true;
 }
@@ -143,10 +146,12 @@ function levelClear(){
 // level 실패시 실행함수
 function levelFalse(){
 	let levelView = level;
-	setTimeout(function(){alert('level' + levelView + ' 실패...');}, 500);
+	let scoreView = score;
+	setTimeout(function(){alert('level' + levelView + ' 실패... ' + '점수 : ' + scoreView + '점');}, 500);
 	squenceCount = 0;
 	squenceList = [];
 	level = 1;
+	score = 0;
 	gameRun = true;
 }
 
