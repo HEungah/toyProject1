@@ -1,21 +1,43 @@
 console.log('simon.js 실행');
 
-let topLeft = document.querySelector('.topLeft');
-let topRight = document.querySelector('.topRight');
-let bottomLeft = document.querySelector('.bottomLeft');
-let bottomRight = document.querySelector('.bottomRight');
+let topLeft = document.querySelector('.topLeft');	// 초록색 구역
+let topRight = document.querySelector('.topRight');	// 빨간색 구역
+let bottomLeft = document.querySelector('.bottomLeft');	// 노란색 구역
+let bottomRight = document.querySelector('.bottomRight');	// 파란색 구역
+let gameInfoWrap = document.querySelector('.gameInfoWrap');	// 게임설명창전체
+let gameInfoBtn = document.querySelector('.gameInfoBtn');	// 게임설명 버튼
+let InfoBtn = document.querySelector('.InfoBtn');	// 게임규칙 설명창 닫기 버튼
 let squenceList = []; // 순서 저장 배열
 let colorList = [];	// 색상 횟수 저장 배열
 let level = 1; // 게임 레벨 변수
 let score = 0;	// 게임 점수 변수
-let squenceCount = 0;
+let squenceCount = 0;	// 게임중 누른 구역 순서 식별용 변수
+let isInfo = true;	// 게임 규칙창 상태 변수
 let gameRun = true;	// 게임 상태 변수
 
-
+gameInfoBtn.addEventListener("click", InfoPrint);
+InfoBtn.addEventListener("click", InfoPrint);
 topLeft.addEventListener("mousedown", topLeftOnClick);
 topRight.addEventListener("mousedown", topRightOnClick);
 bottomLeft.addEventListener("mousedown", bottomLeftOnClick);
 bottomRight.addEventListener("mousedown", bottomRightOnClick);
+
+
+/*-------------------------------------------------------------------------*/
+
+function InfoPrint(){
+	if(isInfo){
+		console.log("설명창 출력");
+		gameInfoWrap.style.top = "0";
+		gameInfoWrap.style.left = "0";
+		isInfo = !isInfo;
+	}else{
+		console.log("설명창 제거");
+		gameInfoWrap.style.top = "-100%";
+		gameInfoWrap.style.left = "-100%";
+		isInfo = !isInfo;
+	}
+}
 
 /*게임판 색상변경 함수*/
 function topLeftOn(){
@@ -58,6 +80,7 @@ function topLeftOnClick(){
 		bottomLeft.style.backgroundColor="#c9ab13";
 		bottomRight.style.backgroundColor="#222889";
 		setTimeout(function(){resetColor()}, 300);
+		// 배열에 저장된 구역변수와 현재 누른 구역의 변수가 같으면 성공
 		if(squenceList[squenceCount] == 0){
 			squenceCount++;
 			if(squenceCount == squenceList.length){
@@ -156,7 +179,7 @@ function levelFalse(){
 }
 
 
-
+// start버튼을 눌렀을때 시작하는 함수(게임 시작)
 function startGame(){	// f start
 	if(gameRun == true){	// if start
 		console.log('게임시작');

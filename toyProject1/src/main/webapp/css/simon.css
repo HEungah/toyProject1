@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-*{padding: 0px; margin: 0px;}
+
+*{padding: 0px; margin: 0px; font-family: 'Fira Sans', sans-serif;}
 
 #wrap{
 	width: 100vw;
@@ -17,6 +18,7 @@
 	height: 800px;
 	background-color: white;
 	margin: 0 auto;
+	position: relative;
 }
 
 #outerCircle{
@@ -27,6 +29,13 @@
 	margin: 0 auto;
 	margin-top: 50px;
 	position: relative;
+}
+
+.gameInfoBtn{
+	position: absolute;
+	top:30px;
+	right: 20px;
+	cursor: pointer;
 }
 
 .topLeft{
@@ -100,6 +109,41 @@
     font-weight: 600;
     transition: 0.25s;
     display: inherit;
+}
+
+.gameInfoWrap{
+	width : 100%;
+	height : 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	top: -100%;
+    left: -100%; 
+
+/* 
+	top : 0;
+	left : 0;
+	 */
+}
+
+.gameInfoBox{
+	background-color: white;
+	border-radius: 30px;
+	width: 400px;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+}
+
+.InfoBtn{
+	background-color: red;
+	text-align: center;
+	height: 30px;
+	padding: 10px;
+	cursor: pointer;
 }
 
 

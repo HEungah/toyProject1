@@ -20,9 +20,17 @@
 				<div class="innerCircle">
 					<div class="gameText">SimonGame</div>
 					<button onclick="startGame()" class="startBtn startBtnPlus">Start</button>
-				</div>
-			</div>
-		</div>
+				</div>	<!-- innerCircle end -->
+			</div>	<!-- outerCircle end -->
+			<div class = "gameInfoWrap">
+				<div class = "gameInfoBox">
+					<div class="InfoBtn">
+						준비됐어요!
+					</div>	<!-- InfoBtn end -->
+				</div>	<!-- gameInfoBox end -->
+			</div>	<!-- gameInfoWrap end -->
+			<h3 class="gameInfoBtn">게임규칙</h3>
+		</div>	<!-- gameWrap end -->
 	</div>
 
 
